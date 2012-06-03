@@ -11,12 +11,34 @@
 		6E92656F157B5E88009B22C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92656E157B5E88009B22C0 /* Foundation.framework */; };
 		6E926571157B5E88009B22C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E926570157B5E88009B22C0 /* CoreGraphics.framework */; };
 		6E92657D157B5E88009B22C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92657C157B5E88009B22C0 /* AppDelegate.m */; };
-		6E92658A157B5F75009B22C0 /* egl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E926585157B5F75009B22C0 /* egl.m */; };
-		6E92658B157B5F75009B22C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 6E926589157B5F75009B22C0 /* README */; };
 		6E926591157B610D009B22C0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E926590157B610D009B22C0 /* OpenGLES.framework */; };
 		6E926593157B613B009B22C0 /* es1_demo.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E926592157B613B009B22C0 /* es1_demo.c */; };
 		6E92659A157B640E009B22C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E926599157B640E009B22C0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EBA4D11157B74E9008BE392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E9265CD157B64FB009B22C0;
+			remoteInfo = EGL_macosx;
+		};
+		6EBA4D13157B74E9008BE392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EF6454A157B674800B96E05;
+			remoteInfo = EGL_ios;
+		};
+		6EBA4D15157B74F2008BE392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EF64549157B674800B96E05;
+			remoteInfo = EGL_ios;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6E926568157B5E88009B22C0 /* EGL_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGL_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,13 +49,11 @@
 		6E92657A157B5E88009B22C0 /* EGL_ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGL_ios-Prefix.pch"; sourceTree = "<group>"; };
 		6E92657B157B5E88009B22C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E92657C157B5E88009B22C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6E926585157B5F75009B22C0 /* egl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = egl.m; sourceTree = "<group>"; };
-		6E926588157B5F75009B22C0 /* eglplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eglplatform.h; sourceTree = "<group>"; };
-		6E926589157B5F75009B22C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		6E926590157B610D009B22C0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6E926592157B613B009B22C0 /* es1_demo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = es1_demo.c; sourceTree = "<group>"; };
 		6E926598157B62F1009B22C0 /* es1_demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = es1_demo.h; sourceTree = "<group>"; };
 		6E926599157B640E009B22C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EGL.xcodeproj; path = EGL_mac_ios/Xcode/EGL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +75,7 @@
 		6E92655D157B5E88009B22C0 = {
 			isa = PBXGroup;
 			children = (
-				6E926583157B5F75009B22C0 /* EGL_mac_ios */,
+				6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */,
 				6E926572157B5E88009B22C0 /* EGL_ios */,
 				6E92656B157B5E88009B22C0 /* Frameworks */,
 				6E926569157B5E88009B22C0 /* Products */,
@@ -103,46 +123,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6E926583157B5F75009B22C0 /* EGL_mac_ios */ = {
+		6EBA4D0A157B74E9008BE392 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E926584157B5F75009B22C0 /* egl_impl */,
-				6E926586157B5F75009B22C0 /* include */,
-				6E926589157B5F75009B22C0 /* README */,
+				6EBA4D12157B74E9008BE392 /* EGL.framework */,
+				6EBA4D14157B74E9008BE392 /* libEGL_ios.a */,
 			);
-			path = EGL_mac_ios;
-			sourceTree = "<group>";
-		};
-		6E926584157B5F75009B22C0 /* egl_impl */ = {
-			isa = PBXGroup;
-			children = (
-				6E926585157B5F75009B22C0 /* egl.m */,
-			);
-			path = egl_impl;
-			sourceTree = "<group>";
-		};
-		6E926586157B5F75009B22C0 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				6E926587157B5F75009B22C0 /* EGL */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		6E926587157B5F75009B22C0 /* EGL */ = {
-			isa = PBXGroup;
-			children = (
-				6E926588157B5F75009B22C0 /* eglplatform.h */,
-			);
-			path = EGL;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E926567157B5E88009B22C0 /* EGL_ios */ = {
+		6E926567157B5E88009B22C0 /* iOS Sample App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E926580157B5E88009B22C0 /* Build configuration list for PBXNativeTarget "EGL_ios" */;
+			buildConfigurationList = 6E926580157B5E88009B22C0 /* Build configuration list for PBXNativeTarget "iOS Sample App" */;
 			buildPhases = (
 				6E926564157B5E88009B22C0 /* Sources */,
 				6E926565157B5E88009B22C0 /* Frameworks */,
@@ -151,8 +146,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				6EBA4D16157B74F2008BE392 /* PBXTargetDependency */,
 			);
-			name = EGL_ios;
+			name = "iOS Sample App";
 			productName = EGL_ios;
 			productReference = 6E926568157B5E88009B22C0 /* EGL_ios.app */;
 			productType = "com.apple.product-type.application";
@@ -175,19 +171,42 @@
 			mainGroup = 6E92655D157B5E88009B22C0;
 			productRefGroup = 6E926569157B5E88009B22C0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6EBA4D0A157B74E9008BE392 /* Products */;
+					ProjectRef = 6EBA4D09157B74E9008BE392 /* EGL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				6E926567157B5E88009B22C0 /* EGL_ios */,
+				6E926567157B5E88009B22C0 /* iOS Sample App */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6EBA4D12157B74E9008BE392 /* EGL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = EGL.framework;
+			path = EGL_macosx.framework;
+			remoteRef = 6EBA4D11157B74E9008BE392 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EBA4D14157B74E9008BE392 /* libEGL_ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEGL_ios.a;
+			remoteRef = 6EBA4D13157B74E9008BE392 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6E926566157B5E88009B22C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E92658B157B5F75009B22C0 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +218,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E92657D157B5E88009B22C0 /* AppDelegate.m in Sources */,
-				6E92658A157B5F75009B22C0 /* egl.m in Sources */,
 				6E926593157B613B009B22C0 /* es1_demo.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EBA4D16157B74F2008BE392 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EGL_ios;
+			targetProxy = 6EBA4D15157B74F2008BE392 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6E92657E157B5E88009B22C0 /* Debug */ = {
@@ -259,6 +285,7 @@
 				GCC_PREFIX_HEADER = "EGL_ios/EGL_ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = EGL_mac_ios/include;
 				INFOPLIST_FILE = "EGL_ios/EGL_ios-Info.plist";
+				OTHER_LDFLAGS = "-lEGL_ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,6 +298,7 @@
 				GCC_PREFIX_HEADER = "EGL_ios/EGL_ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = EGL_mac_ios/include;
 				INFOPLIST_FILE = "EGL_ios/EGL_ios-Info.plist";
+				OTHER_LDFLAGS = "-lEGL_ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,13 +316,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E926580157B5E88009B22C0 /* Build configuration list for PBXNativeTarget "EGL_ios" */ = {
+		6E926580157B5E88009B22C0 /* Build configuration list for PBXNativeTarget "iOS Sample App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E926581157B5E88009B22C0 /* Debug */,
 				6E926582157B5E88009B22C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
