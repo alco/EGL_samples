@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import <OpenGLES/EAGLDrawable.h>
 
 #include "es1_demo.h"
 
@@ -66,6 +67,7 @@
                            160,
                            seg.bounds.size.height);
     seg.selectedSegmentIndex = 0;
+    [seg addTarget:self action:@selector(switchAPI:) forControlEvents:UIControlEventValueChanged];
     [glView addSubview:seg];
     [seg release];
 
@@ -76,6 +78,7 @@
                            kSegWidth,
                            seg.bounds.size.height);
     seg.selectedSegmentIndex = 0;
+    [seg addTarget:self action:@selector(switchColor:) forControlEvents:UIControlEventValueChanged];
     [glView addSubview:seg];
     [seg release];
 
@@ -86,6 +89,27 @@
 {
     renderFrame();
     swapBuffers();
+}
+
+- (void)switchAPI:(UISegmentedControl *)seg
+{
+    if (seg.selectedSegmentIndex == 0) {
+        // ES 1
+    } else {
+        // ES 2
+    }
+}
+
+- (void)switchColor:(UISegmentedControl *)seg
+{
+    if (seg.selectedSegmentIndex == 0) {
+        // RGBA8
+    } else {
+        // RGB565
+        EAGLView *glView = [[_window subviews] objectAtIndex:0];
+        [(CAEAGLLayer *)glView.layer setDrawableProperties:
+         [NSDictionary dictionaryWithObject:kEAGLColorFormatRGB565 forKey:kEAGLDrawablePropertyColorFormat]];
+    }
 }
 
 #pragma mark
