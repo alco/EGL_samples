@@ -11,6 +11,8 @@
 		6E92656F157B5E88009B22C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92656E157B5E88009B22C0 /* Foundation.framework */; };
 		6E926571157B5E88009B22C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E926570157B5E88009B22C0 /* CoreGraphics.framework */; };
 		6E92657D157B5E88009B22C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92657C157B5E88009B22C0 /* AppDelegate.m */; };
+		6E92658A157B5F75009B22C0 /* egl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E926585157B5F75009B22C0 /* egl.m */; };
+		6E92658B157B5F75009B22C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 6E926589157B5F75009B22C0 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		6E92657A157B5E88009B22C0 /* EGL_ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EGL_ios-Prefix.pch"; sourceTree = "<group>"; };
 		6E92657B157B5E88009B22C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E92657C157B5E88009B22C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6E926585157B5F75009B22C0 /* egl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = egl.m; sourceTree = "<group>"; };
+		6E926588157B5F75009B22C0 /* eglplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eglplatform.h; sourceTree = "<group>"; };
+		6E926589157B5F75009B22C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 		6E92655D157B5E88009B22C0 = {
 			isa = PBXGroup;
 			children = (
+				6E926583157B5F75009B22C0 /* EGL_mac_ios */,
 				6E926572157B5E88009B22C0 /* EGL_ios */,
 				6E92656B157B5E88009B22C0 /* Frameworks */,
 				6E926569157B5E88009B22C0 /* Products */,
@@ -82,6 +88,40 @@
 				6E92657A157B5E88009B22C0 /* EGL_ios-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E926583157B5F75009B22C0 /* EGL_mac_ios */ = {
+			isa = PBXGroup;
+			children = (
+				6E926584157B5F75009B22C0 /* egl_impl */,
+				6E926586157B5F75009B22C0 /* include */,
+				6E926589157B5F75009B22C0 /* README */,
+			);
+			path = EGL_mac_ios;
+			sourceTree = "<group>";
+		};
+		6E926584157B5F75009B22C0 /* egl_impl */ = {
+			isa = PBXGroup;
+			children = (
+				6E926585157B5F75009B22C0 /* egl.m */,
+			);
+			path = egl_impl;
+			sourceTree = "<group>";
+		};
+		6E926586157B5F75009B22C0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6E926587157B5F75009B22C0 /* EGL */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6E926587157B5F75009B22C0 /* EGL */ = {
+			isa = PBXGroup;
+			children = (
+				6E926588157B5F75009B22C0 /* eglplatform.h */,
+			);
+			path = EGL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E92658B157B5F75009B22C0 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E92657D157B5E88009B22C0 /* AppDelegate.m in Sources */,
+				6E92658A157B5F75009B22C0 /* egl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +243,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EGL_ios/EGL_ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = EGL_mac_ios/include;
 				INFOPLIST_FILE = "EGL_ios/EGL_ios-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -212,6 +255,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EGL_ios/EGL_ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = EGL_mac_ios/include;
 				INFOPLIST_FILE = "EGL_ios/EGL_ios-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

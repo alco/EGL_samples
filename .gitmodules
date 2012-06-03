@@ -1,0 +1,3 @@
+[submodule "EGL_mac_ios"]
+	path = EGL_mac_ios
+	url = git://github.com/alco/EGL_mac_ios.git
